@@ -1,0 +1,26 @@
+# ---------------[ UE4 generated ]------------------ #
+/Binaries
+/DerivedDataCache
+/Intermediate
+/Saved
+
+
+# ----[ Visual Studio ]------- #
+/.vs
+*.svd
+*.pidb
+*.suo
+*.sln
+ *.opendb
+ *.sdf
+
+# -------------[ OS generated ]------------------------ #
+.DS_Store
+.DS_Store?
+ehthumbs.db
+Thumbs.db
+
+
+# ---------------[ KBE generated ]------------------ #
+/Plugins/KBEnginePlugins/Binaries
+/Plugins/KBEnginePlugins/Intermediate
