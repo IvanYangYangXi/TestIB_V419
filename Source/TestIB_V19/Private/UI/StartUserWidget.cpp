@@ -5,3 +5,7 @@
 
 
 
+bool UStartUserWidget::Initialize()
+{
+
+}
