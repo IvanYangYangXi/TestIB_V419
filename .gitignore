@@ -10,9 +10,10 @@
 *.svd
 *.pidb
 *.suo
-*.sln
+# *.sln
  *.opendb
  *.sdf
+*.VC.db
 
 # -------------[ OS generated ]------------------------ #
 .DS_Store
