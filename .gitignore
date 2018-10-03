@@ -10,7 +10,7 @@
 *.svd
 *.pidb
 *.suo
-# *.sln
+*.sln
  *.opendb
  *.sdf
 *.VC.db
