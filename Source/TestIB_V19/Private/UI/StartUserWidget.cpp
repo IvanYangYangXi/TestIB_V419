@@ -18,5 +18,15 @@ bool UStartUserWidget::Initialize()
 	LoginBtn = Cast<UButton>(GetWidgetFromName(TEXT("Button_Login")));
 	QuitBtn = Cast<UButton>(GetWidgetFromName(TEXT("Button_Quit")));
 
+	// 按钮点击事件
+	QuitBtn->OnClicked.AddDynamic(this, &UStartUserWidget::QuitBtnOnClickedEvent);
+
 	return true;
+}
+
+// 退出按钮点击事件
+void UStartUserWidget::QuitBtnOnClickedEvent()
+{
+	//GEngine->AddOnScreenDebugMessage(-1, 2.f, FColor::Red, TEXT("QuitBtn On Clicked..."));
+	UKismetSystemLibrary::QuitGame(GetWorld(), nullptr, EQuitPreference::Quit);
 }

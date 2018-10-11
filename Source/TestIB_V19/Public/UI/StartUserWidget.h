@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Blueprint/UserWidget.h"
 #include "Runtime/UMG/Public/Components/Button.h"
+#include "Runtime/Engine/Classes/Kismet/KismetSystemLibrary.h"
 #include "StartUserWidget.generated.h"
 
 
@@ -32,5 +33,9 @@ public:
 	// 初始化控件
 	virtual bool Initialize() override;
 	
+public:
+	// 退出按钮点击事件
+	UFUNCTION()
+		void QuitBtnOnClickedEvent();
 	
 };
