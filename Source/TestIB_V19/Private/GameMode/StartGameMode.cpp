@@ -14,5 +14,18 @@ void AStartGameMode::BeginPlay()
 	StartWidget = CreateWidget<UStartUserWidget>(GetGameInstance(), LoadClass<UStartUserWidget>(this, TEXT("WidgetBlueprint'/Game/UI/BP_StartWidgetBlueprint.BP_StartWidgetBlueprint_C'")));
 	// 添加到视口
 	StartWidget->AddToViewport();
+	// 注册账号按钮点击事件
+	StartWidget->RegisterBtn->OnClicked.AddDynamic(this, &AStartGameMode::RegisterBtnOnClickedEvent);
+	// 初始化注册账号界面
+	RegisterWidget = CreateWidget<URegisterUserWidget>(GetGameInstance(), LoadClass<URegisterUserWidget>(this, TEXT("WidgetBlueprint'/Game/UI/BP_RegisterUserWidget.BP_RegisterUserWidget_C'")));
+}
+
+// 注册账号按钮点击事件
+void AStartGameMode::RegisterBtnOnClickedEvent()
+{
+	// 游戏开始界面从视口移除
+	StartWidget->RemoveFromParent();
+	// 添加注册账号界面到视口
+	RegisterWidget->AddToViewport();
 }
 

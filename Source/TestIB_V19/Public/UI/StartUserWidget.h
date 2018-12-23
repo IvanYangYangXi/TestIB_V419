@@ -19,6 +19,9 @@ class TESTIB_V19_API UStartUserWidget : public UUserWidget
 	
 public:
 
+	// Register Button
+	UPROPERTY()
+		UButton* RegisterBtn;
 	// Play Button
 	UPROPERTY()
 		UButton* StartBtn;

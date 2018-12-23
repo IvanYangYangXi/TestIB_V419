@@ -14,6 +14,7 @@ bool UStartUserWidget::Initialize()
 	}
 	
 	// ≥ı ºªØ∞¥≈•
+	RegisterBtn = Cast<UButton>(GetWidgetFromName(TEXT("Button_Register")));
 	StartBtn = Cast<UButton>(GetWidgetFromName(TEXT("Button_PlayGame")));
 	LoginBtn = Cast<UButton>(GetWidgetFromName(TEXT("Button_Login")));
 	QuitBtn = Cast<UButton>(GetWidgetFromName(TEXT("Button_Quit")));

@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "GameFramework/GameMode.h"
 #include "StartUserWidget.h"
+#include "RegisterUserWidget.h"
 #include "StartGameMode.generated.h"
 
 /**
@@ -19,10 +20,15 @@ public:
 	// 定义开始界面
 	UPROPERTY()
 		UStartUserWidget* StartWidget;
+	// 定义注册界面
+	UPROPERTY()
+		URegisterUserWidget* RegisterWidget;
 
 public:
 
 	virtual void BeginPlay() override;
-	
+	// 注册账号按钮点击事件
+	UFUNCTION()
+		void RegisterBtnOnClickedEvent();
 	
 };
